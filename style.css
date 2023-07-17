@@ -145,3 +145,15 @@ h1 {
   transform: translate(-50%, 150%);
   opacity: 1;
 }
+
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
