@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catch NBA Players</title>
+  </head>
+  <body>
+    <div class="screen">
+      <h1>Catch NBA Players</h1>
+      <button class="btn" id="start-btn">Play Game</button>
+    </div>
+    <div class="screen">
+      <h1>Who is your favourite NBA player</h1>
+      <ul class="player-list">
+        <li>
+          <button class="choose-player-btn">
+            <p>LeBron James</p>
+            <img src="./LB.png" alt = "LeBron James"/>
+          </button>
+        </li>
+        <li>
+          <button class="choose-player-btn">
+            <p>Stephen Curry</p>
+            <img src="./curry.png" alt = "Stephen Curry" />
+          </button>
+          </li>
+          <li>
+          <button class="choose-player-btn">
+            <p>Michael Jordan</p>
+            <img src="./MJ.png" alt = "Michael Jordan" />
+          </button>
+          </li>
+        </li>
+      </ul>
+    </div>
+    <div class = "screen game-container" id = "game-container">
+        <h3 id = "time" class = "time">Time: 00:00 </h3>
+        <h3 id = "score" class = "score">Score: 0</h3>
+        <h5 id = "message" class = "message">
+            Are you annnoyed yet? <br />
+            You are playing an impossible game!!
+        </h5>
+    </div>
+    <script src = "app.js"></script>
+  </body>
+</html>
