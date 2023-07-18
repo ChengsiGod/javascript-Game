@@ -5,27 +5,33 @@ const gameContainer = document.getElementById("game-container");
 const timeElement = document.getElementById("time");
 const scoreElement = document.getElementById("score");
 const message = document.getElementById("message");
-let seconds = 0;
+const players = document.querySelectorAll(".player");
+let seconds = 30; // Change to 30 seconds
 let score = 0;
 let selectedPlayer = {};
+let gameInterval; // Add a variable to store the interval
 
 startButton.addEventListener("click", () => screens[0].classList.add("up"));
 
 const increaseScore = () => {
-  score++;
-  if (score > 19) message.classList.add("visible");
-  scoreElement.innerHTML = `Score: ${score}`;
+  if (seconds > 0) {
+    score++;
+    scoreElement.innerHTML = `Score: ${score}`;
+  }
 };
 
 const addPlayers = () => {
-  setTimeout(createPlayer, 1000);
-  setTimeout(createPlayer, 1500);
+  if (seconds > 0) {
+    // Check if the time is over
+    setTimeout(createPlayer, 1000);
+    setTimeout(createPlayer, 1500);
+  }
 };
 
 const catchPlayer = function () {
   increaseScore();
   this.classList.add("caught");
-  setTimeout(() => this.remove, 2000);
+  setTimeout(() => this.remove(), 2000);
   addPlayers();
 };
 
@@ -50,16 +56,25 @@ const createPlayer = () => {
   gameContainer.appendChild(player);
 };
 
-const increaseTime = () => {
+const decreaseTime = () => {
   let m = Math.floor(seconds / 60);
   let s = seconds % 60;
   m = m < 10 ? `0${m}` : m;
   s = s < 10 ? `0${s}` : s;
   timeElement.innerHTML = `Time: ${m}:${s}`;
-  seconds++;
+  seconds--;
+
+  if (seconds < 0) {
+    clearInterval(gameInterval); // Stop the game
+    if (score <= 200000) {
+      message.classList.add("visible"); // Display success message
+    }
+  }
 };
 
-const startGame = () => setInterval(increaseTime, 1000);
+const startGame = () => {
+  gameInterval = setInterval(decreaseTime, 1000); // Assign the interval to the variable
+};
 
 choosePlayerButtons.forEach((button) => {
   button.addEventListener("click", () => {
