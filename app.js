@@ -103,4 +103,3 @@ choosePlayerButtons.forEach((button) => {
     rulesBtn.classList.add("hide");
   });
 });
-s;
