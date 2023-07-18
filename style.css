@@ -130,7 +130,7 @@ h1 {
 }
 
 .message {
-  line-height: 1.7;
+  line-height: 3;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   padding: 20px;
@@ -140,6 +140,7 @@ h1 {
   top: 0;
   left: 50%;
   transform: translate(-50%, -150%);
+  font-size: 24px;
 }
 .message.visible {
   transform: translate(-50%, 150%);
