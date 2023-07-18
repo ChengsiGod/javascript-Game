@@ -22,7 +22,7 @@ const addPlayers = () => {
   setTimeout(createPlayer, 1500);
 };
 
-const catchPlayer = () => {
+const catchPlayer = function () {
   increaseScore();
   this.classList.add("caught");
   setTimeout(() => this.remove, 2000);
@@ -33,7 +33,7 @@ const getRandomLocation = () => {
   const width = window.innerWidth;
   const height = window.innerHeight;
   const x = Math.random() * (width - 200) + 100;
-  const y = Math.random() * (height - 200) + 100;
+  const y = Math.random() * (height - 200) + 200;
   return { x, y };
 };
 
@@ -66,7 +66,7 @@ choosePlayerButtons.forEach((button) => {
     const image = button.querySelector("img");
     const src = image.getAttribute("src");
     const alt = image.getAttribute("alt");
-    selectedInsect = { src, alt };
+    selectedPlayer = { src, alt };
     screens[1].classList.add("up");
     setTimeout(createPlayer, 1000);
     startGame();
