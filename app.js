@@ -20,9 +20,13 @@ rulesBtn.addEventListener("click", () => {
 
 closeRulesBtn.addEventListener("click", () => {
   rulesContainer.style.display = "none";
+  /* rulesBtn.classList.add("hide"); */
 });
 
-startButton.addEventListener("click", () => screens[0].classList.add("up"));
+startButton.addEventListener("click", () => {
+  screens[0].classList.add("up");
+  rulesBtn.classList.add("hide");
+});
 
 const increaseScore = () => {
   if (seconds > 0) {
@@ -96,6 +100,7 @@ choosePlayerButtons.forEach((button) => {
     screens[1].classList.add("up");
     setTimeout(createPlayer, 1000);
     startGame();
+    rulesBtn.classList.add("hide");
   });
 });
 s;

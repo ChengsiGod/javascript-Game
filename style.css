@@ -185,6 +185,10 @@ h1 {
 
 .rules-btn {
   position: absolute;
-  top: 80px;
+  top: 20px;
   left: 20px;
+}
+
+.hide {
+  display: none;
 }
