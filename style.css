@@ -175,16 +175,18 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
+  z-index: 1000;
   display: none;
-  width: 70%;
-  max-width: 400px;
-  border-radius: 50px;
-  opacity: 0.95;
+  text-align: left;
+}
+
+.rules-container.open {
+  display: block;
 }
 
 .rules-btn {
   position: absolute;
-  top: 80px;
-  left: 20px;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
 }

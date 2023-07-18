@@ -22,7 +22,7 @@ closeRulesBtn.addEventListener("click", () => {
   rulesContainer.style.display = "none";
 });
 
-startButton.addEventListener("click", () => screens[0].classList.add("up"));
+/* startButton.addEventListener("click", () => screens[0].classList.add("up")); */
 
 const increaseScore = () => {
   if (seconds > 0) {
