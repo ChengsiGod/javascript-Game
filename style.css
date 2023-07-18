@@ -166,3 +166,25 @@ h1 {
 .player.caught {
   transform: translate(-50%, -50%) scale(0);
 }
+
+.rules-container {
+  background-color: #333333;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: none;
+  width: 70%;
+  max-width: 400px;
+  border-radius: 50px;
+  opacity: 0.95;
+}
+
+.rules-btn {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+}

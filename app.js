@@ -10,6 +10,17 @@ let seconds = 30; // Change to 30 seconds
 let score = 0;
 let selectedPlayer = {};
 let gameInterval; // Add a variable to store the interval
+const rulesBtn = document.getElementById("rules-btn");
+const closeRulesBtn = document.getElementById("close-rules-btn");
+const rulesContainer = document.getElementById("rules-container");
+
+rulesBtn.addEventListener("click", () => {
+  rulesContainer.style.display = "block";
+});
+
+closeRulesBtn.addEventListener("click", () => {
+  rulesContainer.style.display = "none";
+});
 
 startButton.addEventListener("click", () => screens[0].classList.add("up"));
 
